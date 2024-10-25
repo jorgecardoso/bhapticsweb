@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "http-proxy": "^1.18.1",
+    "ip": "^2.0.1"
+  },
+  "scripts": {
+    "start": "cross-env SERVICE_DISCOVERY_URL=https://hmd-link-service.glitch.me node middleware.js"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
