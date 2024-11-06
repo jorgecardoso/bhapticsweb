@@ -45,8 +45,6 @@ const cert =
     }
 
 
-
-
 let proxy = httpProxy.createServer({
     target: 'ws://127.0.0.1:15881', // bhaptics websocket on bHaptics Player
     ws: true,
@@ -57,28 +55,29 @@ let proxy = httpProxy.createServer({
 });
 //console.log(proxy);
 
-    let p = proxy.listen(PORT);
+let p = proxy.listen(PORT);
 
-    proxy.on('proxyReqWs', function (proxyReq, req, socket, options, head) {
-        //console.log( socket);
-        socket.on('error', function(e){
-            console.log("error on", req.url)
-            //console.log(e);
-        })
+proxy.on('proxyReqWs', function (proxyReq, req, socket, options, head) {
+    console.log( req);
+    socket.on('error', function (e) {
+        console.log("error on", req.url)
+        //console.log(e);
+    })
     // listen for messages coming FROM the target here
     //proxySocket.on('data', hybiParseAndLogMessage);
 });
 
-console.log("Started bHaptics middleware on https://"+ip.address()+":"+PORT);
+
+console.log("Started bHaptics middleware on https://" + ip.address() + ":" + PORT);
 console.log("Open the above address first to authorize the use of self-signed certificate on the browser!");
 
 
 console.log("Using Service Discovery Server: " + SERVICE_DISCOVERY_URL);
-let handle = setInterval( function() {
-    fetch(SERVICE_DISCOVERY_URL+"/bhapticsmiddleware/https://"+ip.address()+":"+PORT).then(function(data){
+let handle = setInterval(function () {
+    fetch(SERVICE_DISCOVERY_URL + "/bhapticsmiddleware/wss://" + ip.address() + ":" + PORT).then(function (data) {
         return data.json();
         //console.log(data);
-    }).then(function(json){
+    }).then(function (json) {
         //console.log(json);
     }).catch(error => {
         console.error("Could not connect to service discovery server. Stopping further attemps.")

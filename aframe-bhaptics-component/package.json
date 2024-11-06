@@ -1,0 +1,42 @@
+{
+  "name": "aframe-bhaptics-component",
+  "version": "0.1.0",
+  "description": "A component to control the bHaptics vest",
+  "main": "index.js",
+  "unpkg": "dist/aframe-bhaptics-component.min.js",
+  "scripts": {
+    "dist": "npm run dist:min && npm run dist:max",
+    "dist:max": "webpack",
+    "dist:min": "cross-env NODE_ENV=production webpack",
+    "prepublish": "npm run dist",
+    "start": "cross-env NODE_ENV=production webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgecardoso/bhapticsweb.git"
+  },
+  "keywords": [
+    "aframe",
+    "aframe-component",
+    "aframe-vr",
+    "vr",
+    "webvr",
+    "webxr",
+    "bhaptics"
+  ],
+  "author": "Jorge C. S. Cardoso <jorgecardoso@dei.uc.pt>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jorgecardoso/bhapticsweb/issues"
+  },
+  "homepage": "https://github.com/jorgecardoso/bhapticsweb#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "dependencies": {
+    "tact-js": "^0.4.4"
+  }
+}
