@@ -9,13 +9,41 @@
   <script src="../../dist/aframe-bhaptics-component.js"></script>
 </head>
 <body>
-<a-scene cursor="rayOrigin: mouse">
+<a-scene bhaptics="files: Slash8_Left_Arms.tact,Slash8_Right_Arms.tact,Slash12_Back_Vest.tact,Slash12_Front_Vest.tact" cursor="rayOrigin: mouse">
+
+  <a-assets>
+    <a-asset-item id="tact" src="teste.tact"></a-asset-item>
+  </a-assets>
+
   <a-sky color="lightblue" ></a-sky>
   <a-box
-          bhaptics="on: click; position: VestFront; "
+          bhaptics="on: click; type: dot; position: VestFront; points: 1,5; intensities: 50,50; duration: 500 "
+          position="-0.5 2.6 -3">
+  </a-box>
+
+  <a-box color="green" position="1 2.6 -3"
+          bhaptics="on: click; type: path; position: VestFront; x:0,1 ; y:0,1 ; intensities: 50,50; duration: 1000 "
           position="0 2.6 -3">
   </a-box>
 
+  <a-box color="red" position="-0.5 1.6 -3"
+         bhaptics="on: click; type: file; file: Slash12_Back_Vest.tact"
+         >
+  </a-box>
+  <a-box color="orange" position="0.5 1.6 -3"
+         bhaptics="on: click; type: file; file: Slash12_Front_Vest.tact"
+         >
+  </a-box>
+
+  <a-box color="orange" position="0.5 0.6 -3"
+         bhaptics="on: click; type: file; file: Slash8_Right_Arms.tact"
+  >
+  </a-box>
+
+  <a-box color="orange" position="-0.5 0.6 -3"
+         bhaptics="on: click; type: file; file: Slash8_Left_Arms.tact"
+  >
+  </a-box>
 </a-scene>
 
 <!-- GitHub Corner. -->

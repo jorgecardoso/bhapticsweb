@@ -4,7 +4,7 @@ module.exports = {
     devServer: {
         disableHostCheck: true
     },
-    entry: ['./index.js', './bundle.js'],
+    entry: ['./index.js', './tact-js.js'],
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     output: {
         globalObject: 'this',

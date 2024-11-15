@@ -58,7 +58,7 @@ let proxy = httpProxy.createServer({
 let p = proxy.listen(PORT);
 
 proxy.on('proxyReqWs', function (proxyReq, req, socket, options, head) {
-    console.log( req);
+    //console.log( req);
     socket.on('error', function (e) {
         console.log("error on", req.url)
         //console.log(e);
