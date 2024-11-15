@@ -14,38 +14,19 @@
         cursor="rayOrigin: mouse">
 
   <a-sky color="lightblue" ></a-sky>
-  <a-box
-          bhaptics="on: click; type: dot; position: VestFront; points: 1,5; intensities: 50,50; duration: 500 "
-          position="-0.5 2.6 -3">
+
+  <a-sphere  color="gray" scale="0.2 0.2 0.2"   position="0 1.6 -2">
+  </a-sphere>
+
+  <a-box color="green" position="0 1 -2" height="0.6" width="0.5" depth="0.1"
+          bhaptics="on: click; type: file; file: Slash12_Front_Vest.tact">
   </a-box>
 
-  <a-box color="green" position="1 2.6 -3"
-          bhaptics="on: click; type: path; position: VestFront; x:0,1 ; y:0,1 ; intensities: 50,50; duration: 1000 "
-          position="0 2.6 -3">
-  </a-box>
-
-  <a-box color="red" position="-0.5 1.6 -3"
-         bhaptics="on: click; type: file; file: Slash12_Back_Vest.tact"
-         >
-  </a-box>
-  <a-box color="orange" position="0.5 1.6 -3"
-         bhaptics="on: click; type: file; file: Slash12_Front_Vest.tact"
-         >
-  </a-box>
-
-  <a-box color="orange" position="0.5 0.6 -3"
-         bhaptics="on: click; type: file; file: Slash8_Right_Arms.tact"
-  >
-  </a-box>
-
-  <a-box color="orange" position="-0.5 0.6 -3"
-         bhaptics="on: click; type: file; file: Slash8_Left_Arms.tact"
-  >
-  </a-box>
 
   <a-camera>
     <a-cursor></a-cursor>
   </a-camera>
+  <a-entity laser-controls="hand: right"> </a-entity>
 </a-scene>
 
 <div id="connectionerror" style="width:100%; background-color:white; padding: 15px; text-align:center; position:fixed; bottom: 10px; display:none">

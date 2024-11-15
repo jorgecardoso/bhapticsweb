@@ -65,8 +65,9 @@ AFRAME.registerSystem('bhaptics', {
                     if (registered) return;
 
                     console.log("listened: ", f)
-                    registered = true;
+
                     if (f.status === "Connected" && _this.data.files) {
+                        registered = true;
                         _this.data.files.forEach(file => {
                             console.log("Registering ", file);
                             fetch(file)
