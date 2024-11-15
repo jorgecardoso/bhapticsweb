@@ -9,6 +9,8 @@ AFRAME.registerSystem('bhaptics', {
         middlewareaddress: {type: 'string', default: ''},
         servicediscoveryaddress: {type: 'string', default: 'https://hmd-link-service.glitch.me'},
 
+        displayconnectionerror: {type:'boolean', default:true},
+
         files: {type: 'array'}
     },  // System schema. Parses into `this.data`.
 
@@ -27,11 +29,31 @@ AFRAME.registerSystem('bhaptics', {
         this.middlewarePromise.then(() => {
             console.log("Files to register in bHaptics: ")
             console.log(this.data.files);
-
         });
 
         this.middlewarePromise
             .then((middlewareAddress) => {
+
+                fetch(middlewareAddress.replace("wss", "https")).then(function(e) {
+                    //console.log("result", e)
+                }).catch(function(e) {
+                    //console.log("error", e)
+                    if (e instanceof TypeError) {
+                        //console.log("Cert error")
+                        if (_this.data.displayconnectionerror) {
+                            let div = document.querySelector("#connectionerror");
+
+                            let link = div.querySelector("a");
+                            link.href=middlewareAddress.replace("wss", "https");
+                            div.style.display = "initial";
+
+                            console.log("Showing connection error to user");
+
+                        }
+                    }
+                })
+
+
                 console.log(middlewareAddress)
                 _this.player = new BhapticsPlayer();
                 _this.player.initialize(_this.data.appname, _this.data.appname, middlewareAddress + "/v2/feedbacks?");
@@ -221,7 +243,6 @@ AFRAME.registerComponent('bhaptics', {
         let _this = this;
 
     },
-
 
 });
 
