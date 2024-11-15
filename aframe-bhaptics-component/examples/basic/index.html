@@ -9,7 +9,9 @@
   <script src="../../dist/aframe-bhaptics-component.js"></script>
 </head>
 <body>
-<a-scene bhaptics="files: Slash8_Left_Arms.tact,Slash8_Right_Arms.tact,Slash12_Back_Vest.tact,Slash12_Front_Vest.tact" cursor="rayOrigin: mouse">
+<a-scene
+        bhaptics="files: Slash8_Left_Arms.tact,Slash8_Right_Arms.tact,Slash12_Back_Vest.tact,Slash12_Front_Vest.tact"
+        cursor="rayOrigin: mouse">
 
   <a-assets>
     <a-asset-item id="tact" src="teste.tact"></a-asset-item>
@@ -44,6 +46,10 @@
          bhaptics="on: click; type: file; file: Slash8_Left_Arms.tact"
   >
   </a-box>
+
+  <a-camera>
+    <a-cursor></a-cursor>
+  </a-camera>
 </a-scene>
 
 <!-- GitHub Corner. -->
