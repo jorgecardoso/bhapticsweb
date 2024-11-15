@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>A-Frame bHaptics Component - Basic</title>
+  <meta name="description" content="Basic example for bHaptics component."></meta>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+
+  <script src="../../dist/aframe-bhaptics-component.js"></script>
+</head>
+<body>
+<a-scene
+        bhaptics=""
+        cursor="rayOrigin: mouse">
+
+  <a-sky color="lightblue" ></a-sky>
+
+  <!-- front -->
+  <a-entity position="-1.5 2 -2 ">
+    <a-text value="Front" position="0.5 0.5 0"> </a-text>
+
+    <a-sphere position="0 0 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 0; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 0 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 1; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 0 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 2; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1.5 0 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 3; intensities: 50; duration: 250 "></a-sphere>
+
+    <a-sphere position="0 -0.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 4; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 -0.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 5; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 -0.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 6; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1.5 -0.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 7; intensities: 50; duration: 250 "></a-sphere>
+
+
+    <a-sphere position="0 -1 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 8; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 -1 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 9; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 -1 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 10; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1.5 -1 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 11; intensities: 50; duration: 250 "></a-sphere>
+
+
+    <a-sphere position="0 -1.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 12; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 -1.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 13; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 -1.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 14; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1.5 -1.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 15; intensities: 50; duration: 250 "></a-sphere>
+
+
+    <a-sphere position="0 -2 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 16; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 -2 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 17; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 -2 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 18; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1.5 -2 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestFront; points: 19; intensities: 50; duration: 250 "></a-sphere>
+
+  </a-entity>
+
+
+
+  <!-- back -->
+  <a-entity position="1.5 2 -2 ">
+    <a-text value="Back" position="0.5 0.5 0"> </a-text>
+
+    <a-sphere position="0 0 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 0; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 0 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 1; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 0 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 2; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1.5 0 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 3; intensities: 50; duration: 250 "></a-sphere>
+
+    <a-sphere position="0 -0.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 4; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 -0.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 5; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 -0.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 6; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1.5 -0.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 7; intensities: 50; duration: 250 "></a-sphere>
+
+
+    <a-sphere position="0 -1 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 8; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 -1 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 9; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 -1 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 10; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1.5 -1 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 11; intensities: 50; duration: 250 "></a-sphere>
+
+
+    <a-sphere position="0 -1.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 12; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 -1.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 13; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 -1.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 14; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1.5 -1.5 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 15; intensities: 50; duration: 250 "></a-sphere>
+
+
+    <a-sphere position="0 -2 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 16; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 -2 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 17; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 -2 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 18; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1.5 -2 0" scale="0.2 0.2 0.2 " color="gray"
+              bhaptics="on: click; type: dot; position: VestBack; points: 19; intensities: 50; duration: 250 "></a-sphere>
+
+  </a-entity>
+
+
+
+  <!-- Arm left -->
+  <a-entity position="4 2 -2 ">
+    <a-text value="Arm Left" position="0.1 0.5 0"> </a-text>
+
+    <a-sphere position="0 0 0" scale="0.2 0.2 0.2 " color="blue"
+              bhaptics="on: click; type: dot; position: ForearmL; points: 0; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 0 0" scale="0.2 0.2 0.2 " color="blue"
+              bhaptics="on: click; type: dot; position: ForearmL; points: 1; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 0 0" scale="0.2 0.2 0.2 " color="blue"
+              bhaptics="on: click; type: dot; position: ForearmL; points: 2; intensities: 50; duration: 250 "></a-sphere>
+
+    <a-sphere position="0 -0.5 0" scale="0.2 0.2 0.2 " color="blue"
+              bhaptics="on: click; type: dot; position: ForearmL; points: 3; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 -0.5 0" scale="0.2 0.2 0.2 " color="blue"
+              bhaptics="on: click; type: dot; position: ForearmL; points: 4; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 -0.5 0" scale="0.2 0.2 0.2 " color="blue"
+              bhaptics="on: click; type: dot; position: ForearmL; points: 5; intensities: 50; duration: 250 "></a-sphere>
+  </a-entity>
+
+
+  <!-- Arm right -->
+  <a-entity position="4 0.5 -2 ">
+    <a-text value="Arm Right" position="0.1 0.5 0"> </a-text>
+
+    <a-sphere position="0 0 0" scale="0.2 0.2 0.2 " color="green"
+              bhaptics="on: click; type: dot; position: ForearmR; points: 0; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 0 0" scale="0.2 0.2 0.2 " color="green"
+              bhaptics="on: click; type: dot; position: ForearmR; points: 1; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 0 0" scale="0.2 0.2 0.2 " color="green"
+              bhaptics="on: click; type: dot; position: ForearmR; points: 2; intensities: 50; duration: 250 "></a-sphere>
+
+    <a-sphere position="0 -0.5 0" scale="0.2 0.2 0.2 " color="green"
+              bhaptics="on: click; type: dot; position: ForearmR; points: 3; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="0.5 -0.5 0" scale="0.2 0.2 0.2 " color="green"
+              bhaptics="on: click; type: dot; position: ForearmR; points: 4; intensities: 50; duration: 250 "></a-sphere>
+    <a-sphere position="1 -0.5 0" scale="0.2 0.2 0.2 " color="green"
+              bhaptics="on: click; type: dot; position: ForearmR; points: 5; intensities: 50; duration: 250 "></a-sphere>
+
+
+  </a-entity>
+
+
+  <a-camera>
+    <a-cursor></a-cursor>
+  </a-camera>
+</a-scene>
+
+<div id="connectionerror" style="width:100%; background-color:white; padding: 15px; text-align:center; position:fixed; bottom: 10px; display:none">
+  <p>Connection error. You may need to authorize the self-signed certificate by first accessing the link below.
+  You should only need to do this once per browser.</p>
+ <p><a href="" target="_blank" >Click here to check if you need to authorize the self-signed certificate.</a> </p>
+  <p>After you authorize the self-signed certificate, reload this page.</p>
+</div>
+</body>
+</html>
