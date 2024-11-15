@@ -82,13 +82,12 @@ AFRAME.registerSystem('bhaptics', {
                     }
 
                 })
-                /*
+
                 _this.player.submitDot("key", 'VestFront', [{
                     index: 10,
                     intensity: 100
                 }], 20);
 
-*/
 
             })
             .catch(error => {
